@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <head>
+        <title>Practise Selectors</title>
+      </head>
+      <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr />
+        <button onClick="changeH1()">Change H1</button>
+        <button onClick="changeH3()">Change H3</button>
+        <button onClick="changeH5()">Change H5</button>
+        <button onClick="changeGreen()">Change Green</button>
+        <button onClick="changeRed()">Change Red</button>
+        <button onClick="changeBlue()">Change Blue</button>
+        <script>
+          function changeH1() {
+            firsth1 = document.querySelector("h1")
+            firsth1.style.color="red"
+          }
+    
+          function changeH3() {
+            allh3= document.querySelectorAll("h3")
+            for (i=0;i<=allh3.length;i++){
+                allh3[i].style.color="green"
+            }
+          }
+    
+          function changeH5() {
+            allh5= document.querySelectorAll("h5")
+            allh5.forEach(h5 => {
+                h5.style.color="blue"
+            });
+          }
+    
+          function changeGreen() {
+            allgreen=document.querySelectorAll(".green")
+            allgreen.forEach(green => {
+                green.style.color="green";
+            });
+          }
+    
+          function changeRed()  {
+            allgreen=document.querySelectorAll(".red")
+            allgreen.forEach(red => {
+                red.style.color="red";
+            });
+          }
+    
+          function changeBlue() {
+            allgreen=document.querySelectorAll(".blue")
+            allgreen.forEach(element => {
+                element.style.color="blue";
+            });
+          }
+        </script>
+      </body>
+    </html>
+
+    <!-- Complete the functionality in the file selectors.html
+
+    On clicking the button Change H1 the colour of first <h1> should turn to red
+    On clicking the button Change H3 the colour of all <h3> should turn to green
+    On clicking the button Change H5 the colour of all <h5> should turn to blue
+    On clicking Change Green all the elements with the class green should change to green
+    On clicking Change Blue all the elements with the class blue should change to blue
+    On clicking Change Red all the elements with the class red should change to red -->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #firstnum{
+            text-align: center;
+            font-size: 40px;
+        }
+        #secondnum{
+            text-align: center;
+            font-size: 40px;
+        }
+        #inputt{
+            text-align: center;
+            margin-top: 200px;
+        }
+        #operator{
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content:center;
+        }
+        .op{
+            font-size: 40px;
+            margin: 30px 20px 20px 20px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="inputt">
+    <input type="number" placeholder="enter 1st Number" id="firstnum">
+    <input type="number" placeholder="enter 2nd Number" id="secondnum">
+    </div>
+    <div id="operator">
+    <button class="op" id="add">Add</button>
+    <button class="op" id="subtract">Subtract</button>
+    <button class="op" id="multiply">Multiply</button>
+    <button class="op" id="divide">Divide</button>
+    </div>
+</body>
+</html>
+<script>
+    let first = parseFloat(document.getElementById("firstnum").value);
+    let second = parseFloat(document.getElementById("secondnum").value);
+    let sum = document.getElementById("add");
+    let minus= document.getElementById("subtract");
+    let multiplication= document.getElementById("multiply");
+    let division= document.getElementById("divide");
+     
+    sum.addEventListener('click',function(){
+        let first = parseFloat(document.getElementById("firstnum").value);
+        let second = parseFloat(document.getElementById("secondnum").value);
+        let result = first + second
+        alert("Ans = " + result)
+    });
+    minus.addEventListener('click',function(){
+        let first = parseFloat(document.getElementById("firstnum").value);
+        let second = parseFloat(document.getElementById("secondnum").value);
+        let result = first - second
+        alert("Ans = " + result)
+    });
+    multiplication.addEventListener('click',function(){
+        let first = parseFloat(document.getElementById("firstnum").value);
+        let second = parseFloat(document.getElementById("secondnum").value);
+        let result = first * second
+        alert("Ans = " + result)
+    });
+    division.addEventListener('click',function(){
+        let first = parseFloat(document.getElementById("firstnum").value);
+        let second = parseFloat(document.getElementById("secondnum").value);
+        let result = first / second
+        alert("Ans = " + result)
+    });
+    
+    
+</script>

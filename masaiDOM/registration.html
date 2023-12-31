@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name" placeholder="Name">
+	<select id="gender" >
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email" placeholder="email">
+	<input type="text" name="mobile" id="mobile" placeholder="phone no.">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			let dName=document.getElementById("dName")
+            let name=document.getElementById("name").value
+            dName.innerText="NAME :  "+name
+		}
+
+		function showGender() {
+			let dGender=document.getElementById("dGender")
+            let gender=document.getElementById("gender").value
+            dGender.innerText="GENDER :  "+gender
+		}
+
+		function showEmail() {
+			let dEmail=document.getElementById("dEmail")
+            let email=document.getElementById("email").value
+            dEmail.innerText="EMAIL :  "+email
+		}
+
+		function showMobile() {
+		    let dMobile=document.getElementById("dMobile")
+            let mobile=document.getElementById("mobile").value
+            dMobile.innerText="MOBILE :  "+mobile
+		}
+
+		function resetForm() {
+            document.getElementById("name").value="";
+            document.getElementById("gender").value="";
+            document.getElementById("email").value="";
+            document.getElementById("mobile").value="";
+
+            
+            
+		}
+
+		function resetDisplay() {
+            document.getElementById("dName").textContent = "NAME";
+            document.getElementById("dGender").textContent = "GENDER";
+            document.getElementById("dEmail").textContent = "EMAIL";
+            document.getElementById("dMobile").innerText= "MOBILE";
+			
+		}
+	</script>
+</body>
+</html>
+<!-- Complete all the functions by creating a copy of the above template with the file name registration.html -->
