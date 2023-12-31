@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+   
+}
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 0;
+    color: #116c5d;
+    margin-bottom: 50px;
+}
+
+main {
+    text-align: center;
+}
+
+.calculator {
+    background-color: #fff;
+    border: 0px solid #ccc;
+    border-radius: 0px ;
+    width: 200px;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-bottom: 60px;
+    border-style:outset; 
+
+
+
+}
+
+ #display {
+    width: 95%;
+    height: 40px;
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    margin-right: 5px;
+
+        
+} 
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px 1px;
+} 
+
+button {
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #fdfafa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s; 
+    border-radius: 5px;
+    border-style:unset;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('7')">1</button>
+            <button onclick="appendToDisplay('8')">2</button>
+            <button onclick="appendToDisplay('9')">3</button>
+            <button onclick="appendToDisplay('+')" style="background-color: rgb(0, 0, 0); color: white;">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" style="background-color: black;color: white;">-</button>
+            <button onclick="appendToDisplay('1')">7</button>
+            <button onclick="appendToDisplay('2')">8</button>
+            <button onclick="appendToDisplay('3')">9</button>
+            <button onclick="appendToDisplay('*')"style="background-color: black;color: white;">*</button>
+            <button onclick="appendToDisplay('0')" style="background-color: red; color: white;">C</button>
+            <button onclick="clearDisplay()">0</button>
+            <button onclick="calculateResult()"style="background-color: black; color: white;">=</button>
+            <button onclick="appendToDisplay('/')" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">/</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
+<!-- //  let keypad= document.getElementsByClassName("nums");
+  //  let operatorButton = document.getElementsByClassName("operator");
+  //  let head = document.getElementById("display");
+  //  let equalto = document.getElementById("equal");
+  //  let cancel = document.getElementById("blank");
+  //  let firstNumber = "";
+  //  let isFirstNumber = true;
+  //  let secondNumber = "";
+  //  let operators="";
+  //  equalTo.addEventListener('click',function(){
+  //     head.innerText=calculate(firstNumber,secondNumber,operators)
+  //  })
+  //  for (let i=0;i<keypad.length;i++){
+  //     keypad[i].addEventListener('click',function(){
+  //         if(isFirstNumber==true){
+  //             firstNumber+=keypad[i].innerText;
+  //             head.innerText=firstNumber;
+  //         }else{
+  //             secondNumber+=keypad[i].innerText;
+  //             head.innerText=secondNumber;
+  //         }
+  //     })
+  //  }
+  //       for(let i=0;i<operatorButton.length;i++){
+  //         operatorButton[i].addEventListener('click',function(){
+  //             isFirstNumber= false;
+  //             operators = operatorButton[i].innerText
+  //         })
+  //       }
+  //       function calculate(firstNumber,secondNumber,opearators){
+  //         switch(opearators){
+  //             case "+":
+  //                 return Number(firstNumber)+Number(secondNumber);
+  //             case "-":
+  //                 return Number(firstNumber)-Number(secondNumber);
+  //             case "*":
+  //                 return Number(firstNumber)*Number(secondNumber);
+  //             case "/":
+  //                 return Number(firstNumber)/Number(secondNumber);
+  //         }
+  //       }
+
+  // let keypad = document.getElementsByClassName("nums");
+  // let operatorButton = document.getElementsByClassName("operator");
+  // let head = document.getElementById("display");
+  // let equalto = document.getElementById("equal");
+  // let cancel = document.getElementById("blank");
+  // let firstNumber = "";
+  // let isFirstNumber = true;
+  // let secondNumber = "";
+  // let operators = "";
+
+  // equalto.addEventListener('click', function(){
+  //     head.innerText = calculate(firstNumber, secondNumber, operators);
+  // });
+
+  // for (let i = 0; i < keypad.length; i++) {
+  //     keypad[i].addEventListener('click', function(){
+  //         if (isFirstNumber) {
+  //             firstNumber += keypad[i].innerText;
+  //             head.value = firstNumber;
+  //         } else {
+  //             secondNumber += keypad[i].innerText;
+  //             head.value = secondNumber;
+  //         }
+  //     });
+  // }
+
+  // for (let i = 0; i < operatorButton.length; i++) {
+  //     operatorButton[i].addEventListener('click', function() {
+  //         isFirstNumber = false;
+  //         operators = operatorButton[i].innerText;
+  //     });
+  // }
+
+  // function calculate(firstNumber, secondNumber, operators) {
+  //     switch (operators) {
+  //         case "+":
+  //             return Number(firstNumber) + Number(secondNumber);
+  //         case "-":
+  //             return Number(firstNumber) - Number(secondNumber);
+  //         case "*":
+  //             return Number(firstNumber) * Number(secondNumber);
+  //         case "/":
+  //             return Number(firstNumber) / Number(secondNumber);
+  //         default:
+  //             return "Invalid operator";
+  //     }
+  // } -->
