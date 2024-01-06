@@ -1,0 +1,89 @@
+1. What is React?
+=> React is open-source front-end Javascript library for building user interfaces based on components. it is maintained by Meta(Facebook). 
+Generally we use React to build single page application.
+
+2. Who made React?
+=> React was created by Jordan Walke, a software engineer at Meta, who released an early prototype of React called "FaxJS".
+ He was influenced by XHP, an HTML component library for PHP.
+
+3. What is Babel?
+=> Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older 
+browsers or environments. Here are the main things Babel can do:
+
+.Transform syntax.
+.Source code transformations.
+.convert JSX Syntax.
+
+4. How does Babel convert html code in React into valid code?
+=> Babel is a key tool that can translate JSX syntax, which is used to create HTML-like code in React components,
+into valid JavaScript code that can be executed in preferred browsers.
+By converting the JSX code into JavaScript functions that return the same HTML-like structures.
+
+5. What is ReactDOM used for? Write an example?
+=> ReactDOM renders components or JSX elements to the DOM. The ReactDOM object has only a handful of methods;
+you've probably used the render() method, which is responsible for rendering the app in the browser.
+The react-dom package serves as the entry point to the DOM.
+
+6. What are the packages that you need to import for react to work with?
+=> Best React Packages: Our Picks. State. Redux Toolkit. Jotai and Zustand. User Interfaces. Styles Components. Emotion.
+Tailwind CSS. Utility. Storybook. React Testing Library. Classname and clsx. React Table. React DnD. React Spring. React Hook Form.
+Data Fetching. React Query. SWR.
+
+7. How do you add react to a web application?
+=> Open the HTML file you want to edit and add a div on which you want to add the React implementation. Provide a unique ID attribute to the div,
+as shown above. This will allow us to distinguish it from the element we want to implement. Here,
+we have added the scripts to load/import the React library.
+
+8. What is React.createElement?
+=> React.createElement is a fundamental method of React JS. The main use of React.createElement is the Creation of a React component. 
+It is the JavaScript format for creating react components. Also, the JSX react component when transpired invokes this only method for 
+creating the component.
+
+Syntax:
+React.createElement(type,{props},children); 
+// JSX code 
+
+9. What are the three properties that createElement accept?
+=> 
+In React, the createElement function is used to create React elements. It accepts three main properties:
+
+ 1.Type (or Element Type):
+The type of the HTML element or React component you want to create. It can be a string representing an HTML tag (e.g., 'div', 'span')
+or a reference to a React component.
+
+ 2.Props (or Properties):
+An object that contains the properties or attributes you want to assign to the element. These properties can include event handlers,
+styles, and other attributes specific to the element or component.
+
+ 3.Children:
+The content or children of the element, which can be other React elements, strings, or numbers. This property represents the content
+that will be placed inside the created element.
+
+Here's a basic example of using createElement:
+const element = React.createElement('div', { className: 'my-class' }, 'Hello, World!');
+
+10. What is the meaning of render and root?
+=> In the context of React, "render" and "root" have specific meanings:
+
+ 1.Render:
+In React, "render" refers to the process of converting React components into actual HTML elements and displaying them on the screen. 
+This involves creating a virtual DOM representation of the UI based on the React component tree and updating the actual DOM as needed. 
+The render method is a crucial part of React components and is responsible for describing what the UI should look like at any given point in time.
+
+ 2.Root:
+The "root" in React usually refers to the root DOM element where the entire React application is mounted. 
+It's the starting point of the React component tree. The root element is typically identified by an HTML
+element with an id attribute in the main HTML file. 
+ For example:
+<div id="root"></div>
+In this case, the element with the id "root" serves as the container for the React application. 
+The React application's component tree is rendered inside this root element.
+
+When you create a React app using tools like Create React App, this root element is automatically generated for you in the public/index.html file.
+So, in summary, "render" is the process of converting React components into the actual UI,
+and "root" is the DOM element where the React application is mounted.
+
+
+
+
+
