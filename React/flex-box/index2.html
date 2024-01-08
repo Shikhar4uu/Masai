@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <link rel="stylesheet" href="index2.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </body>
+</html>
+
+<script type="text/babel">
+  const domContainer = document.getElementById("root");
+
+  const elem = (
+    
+    <div class="mainbox">
+      <h2 class="heading">Parent</h2>
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+
+      </div>  
+    
+  );
+
+  const reactRoot = ReactDOM.createRoot(domContainer);
+
+  reactRoot.render(elem);
+</script>
